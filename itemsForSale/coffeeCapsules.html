@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="logo">
+
+        <h1><span>C</span>offeeworks</h1>
+    </div>
+
+    <nav class="mainNav">
+        <ul>
+        <a href="../store.html">Home</a>
+        <a href="../login.html">Login</a>
+        <a href="../visit.html">Visit</a>
+        <a id="cartNavBtn">Cart <span id="cartCount"></span></a>
+        </ul>
+
+        <div id="cartData">
+            <div id="showCart" >
+                </div>
+                    <div class="cartBottom">You have <span id="countCart">0</span> items in your cart!</div>
+                    <div class="cartBottom">Total Cart: R<span id="totalCart">0</span></div>
+                    <a href="checkOutPage/checkOut.html" id="checkOut"><button class="checkOutBtn">CHECKOUT</button></a>
+        </div>
+    </nav>
+    <div class="itemText">
+                    
+            <ul>
+                    <h4> maxime eveniet! Quo!</h4>
+                    <li>Lo amet consectetur adipisicing elit. Dolores impedit, quo vel nobis maiores nam est culpa perspiciatis voluptates earum quasi autem fugit repellat itaque esse rerum repudiandae architecto aliquam!</li>
+                    <h4> sit amet  Facilis, pariatur necessitatibus</h4>
+                    <li>sit amet consectetur adipisicing elit. Voluptates provident temporibus ut perferendis fugit distinctio vitae illo, corporis assumenda dicta molestias eaque tempora, impedit eos facilis nisi soluta? Earum, numquam?</li>
+                    <li>amet consectetur adipisicing elit. Possimus optio ab sapiente animi iste! Unde voluptatum veritatis voluptates deserunt! Ea fugiat, magni at inventore aperiam consequuntur aliquid deserunt accusamus hic.</li>
+            </ul>
+    </div>
+
+        <div class="itemImage">
+            <img src="https://www.super-espresso.com/wp-content/uploads/2013/10/Nespresso-Capsules.jpg" alt="">
+            <button class="addToCart" data-name="Capsules" data-price="700">Add to Cart</button>
+                   </div>
+                   <script src='../storage.js'></script>
+                   <script>
+                   // Hide cart until clicked on
+                   let cartDisplay = $('#cartData').hide();
+               
+               //    Slide cart open
+               $('#cartNavBtn').click(function(){
+                   cartDisplay.slideToggle(1000)
+               });
+               // Cart items click function
+               $('.addToCart').click(function (event){
+               event.preventDefault();
+               let name = $(this).attr('data-name');
+               let price = Number($(this).attr('data-price'));
+               
+               shoppingCart.addItemToCart(name, price, 1);
+               displayCart()
+               });
+               
+               function displayCart(){
+               let output = "";
+               let cartArray = shoppingCart.listCart();
+               
+               for(items in cartArray){
+                  output+= '<p>'
+               
+                   +cartArray[items].name
+                   + " <input class='item-count' type='number' data-name='" + cartArray[items].name + "' value='" + cartArray[items].count + "' >"
+                   + ' X' + cartArray[items].count + ' = ' + "R" + cartArray[items].total
+                   + "<button class='remove-item' data-name= '" + cartArray[items].name + "'>" + 'x' + '</button>'  
+                   +'</p>'
+               }
+               
+               $('#showCart').html(output);
+               $('#countCart').html(shoppingCart.countCart());
+               $('#cartCount').html(shoppingCart.countCart());
+               $('#totalCart').html(shoppingCart.totalPrice());
+               };
+               
+               // **Event Delegation**
+               $('#showCart').on('click', '.remove-item', function(event){
+               let name = $(this).attr('data-name');
+               shoppingCart.deleteItem(name);
+               displayCart();
+               });
+               
+               $('#showCart').on('change', '.item-count', function(change){
+               let name = $(this).attr('data-name');
+               // Have to set to number so it wont interfere with html
+               let newCount = Number($(this).val());
+               shoppingCart.updateCount(name, newCount);
+               displayCart();
+               })
+                   </script>
+</body>
+
+</html>
+</body>
+
+</html>

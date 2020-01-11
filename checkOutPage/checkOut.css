@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+                 }
+
+.logo{
+    background-image: url('https://fsmedia.imgix.net/a0/f8/d8/8e/5aa0/4e35/b25c/75c29e1dc05a.jpeg?rect=0%2C0%2C4889%2C2446&dpr=2&auto=format%2Ccompress&w=650');
+    height: 200px;
+}
+
+div h1{
+    background-image: url('https://image.freepik.com/free-photo/white-wooden-texture-flooring-background_53876-63646.jpg');
+    background-repeat: repeat-x;
+     background-clip: unset;
+    -webkit-background-clip: text;
+    animation: coffeeFlow 20s linear infinite;
+    position: absolute;
+    color: rgba(250, 250, 250, 0.1);
+    margin: 30px;
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes coffeeFlow{
+        0%{background-position: left 0px top 0}
+        100%{background-position: left 910px top 0}
+};
+
+.logo img{
+     margin-top:0px;
+    display: block;
+    width: 100%;
+    border: 1 px solid brown;
+    filter: drop-shadow(0px 1px #955E3F)
+}
+
+.mainNav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: block;
+;
+         }
+#cartCount{
+         color: red;
+         }
+div #showCart{
+        padding: 10px;
+        }
+ #cartData {
+            background-color: #D1A97F;
+            border: 3px solid black;
+            width: 450px;
+            margin-top: 60px;
+            margin-left: -50px;
+            };  
+
+#homeColor{
+    background-color: aqua;
+    opacity: 0.8;
+   
+}
+#checkOutContainer{
+    margin-top: 80px;
+    padding: 0px;
+    font-size: 30px;
+    /* display: block; */
+    background-color:white; 
+}
+
+ul a{
+    color: mediumseagreen;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px ;
+    display: block;
+    text-transform: uppercase;
+    }
+
+ul a:hover{
+    background-color: aqua;
+    transform: scale(1.1)
+
+}
+
+.search{
+    text-align: center;
+    /* position: sticky; */
+    top: 0;
+    margin-left: 300px
+            }
+.search input{
+    background-color: white;
+    border-radius: 10px;
+    height: 20px;
+    border: 1px solid mediumseagreen;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 40px;
+}
+    .search input:hover{
+        transition: 1.2s;
+        width: 195px;
+        height: 30px;
+        transition: 1.2s;
+        border: 5px solid mediumseagreen;
+        box-shadow: 5px 10px black;
+    }
+.search button{
+            border-radius: 10px;
+            border: 5px seagreen solid;
+            height: 30px;
+            width: 80px;
+            background-color: aqua;
+    }
+.search button:hover{
+    opacity: 0.6;
+    box-shadow: 5px 10px black;
+}
+
+div.row{
+   margin-left: 80px;
+   color: black;
+};
+#summary{
+    border: 5px solid black
+}
+#cartTotal{
+    background-color: gray;
+    width: 1194px;
+    text-align: center
+};
+main #book{
+    display: block;
+    text-align: center
+}

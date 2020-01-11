@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffeeworks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="checkOut.css">
+</head>
+<body>
+    <div class="logo">
+
+        <h1><span>C</span>offeeworks</h1>
+    </div>
+
+    <nav class="mainNav">
+        <ul>
+            <a href="../store.html" id='homeColor'>Home</a>
+            <a href="../login.html">Login</a>
+            <a href="../visit.html">Visit</a>
+        </ul>
+    </nav>
+    </div>
+    <main id="checkOutContainer">
+        <div class="container-fluid white">
+            <div class="row ">
+                <div class="col-lg-6 border border-white">
+                        <p><b>Add Coupon</b></p>
+                        <input id="coupon" value="" placeholder="enter coupon code"input>
+                        <button id="coupon-btn">Generate</button>
+                </div>
+
+            <div class="col-lg-6 border border-white">
+            <p><b>Shipping</b></p>
+                <select name="" id="shipping">
+                        <option value="">Collect from warehouse</option>
+                    <option value="">Courier(Cash on delivery)</option>
+                </select>
+            </div>
+        </div>
+        </div>
+        <div id="summary"> 
+                <p><b>Order Summary</b></p>
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Product name</th>
+                        <th>#</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody id="checkOutItems">
+                      <tr>
+                        <td>a</td>
+                        <td>d</td>
+                        <td>a</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                    <span id="checkOutItems">
+                     </span>
+            <div id="cartTotal">
+                <p>Total Price <span id="total" class="final"></span></p>
+                <p>VAT 14% <span id="vatPrice" class="final"></span></p>
+                <p>Grand Total <span id="grandTotal" class="final"></span></p>
+            </div>
+        </div>
+        <button type="submit" id='book'>Place Order</button>
+    </main>
+</body>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="storage.js"></script>
+<script src="checkOut.js"></script>
+</html>
