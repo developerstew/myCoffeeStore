@@ -1,5 +1,4 @@
 
-
 body{
     margin: 0;
     padding: 0;
@@ -63,7 +62,7 @@ div #showCart{
     border: 3px solid black;
     width: 450px;
     margin-top: 60px;
-    margin-left: -50px;
+    margin-left: 0px;
         };
 
 
@@ -147,6 +146,7 @@ footer{
 .formInput input{
     background-color: white;
     border-radius: 10px;
+    width: 7em;
     height: 20px;
     border: 1px solid mediumseagreen;
     border-radius: 10px;
@@ -294,7 +294,7 @@ td{
     position: absolute;
     display: block;
     padding: 10px;
-    top: 225px;
+    top: 360px;
     left: 0px;
     animation-name: itemMove;
    animation-duration: 6s;
@@ -308,12 +308,13 @@ td{
 
 .itemImage button{
     padding: 5px;
+    float: right;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    border: 5px seagreen solid;
+    border: 5px solid #955E3F;
     width: 90px;
-    background-color: aqua;
+    background-color: white;
 }
 
 .itemImage button:hover{
@@ -322,18 +323,17 @@ td{
 }
 
 .itemText ul{
-    position: absolute;
-    top: 200px;
+    margin-top: 8em;
     display: block;
     text-align: left;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    color: cornsilk
        }
 
 .itemText li{
     padding: 10px;
-    width: 400px
+    width: 400px;
+    color: black;
 }
 
 .itemText h4{

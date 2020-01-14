@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coffeeworks</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+function App() {
+  return (
+    <div className="App">
+    <body>
     <div class="logo">
         <h1><span>C</span>offeeworks</h1>
         <form class="form-inline" id="searchBar">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search"></input>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
     </div>
@@ -32,15 +27,14 @@
                             <button id="checkOutBtn">CHECKOUT</button>
                 </div>
           </nav>
-    </div>
-
     <main>
         <h3>Our top selection</h3>
         <div id="first">
-            <!--Align images horizontally  -->
             <div class="firstImages cartItem">
-                <a href="itemsForSale/pureCup.html"> <img
-                        src="https://media.takealot.com/covers_tsins/56237514/56237514-1A-pdpxl.jpg" alt=""></a>
+                <a href="itemsForSale/pureCup.html"> 
+                <img src="https://media.takealot.com/covers_tsins/56237514/56237514-1A-pdpxl.jpg" alt="">
+                </img>
+                </a>
                 <p>Just add water</p>
                 <button class="addToCart" data-name="pureCup" data-price="500" data-image="https://media.takealot.com/covers_tsins/56237514/56237514-1A-pdpxl.jpg">Add to Cart</button>
             </div>
@@ -48,32 +42,37 @@
             <div class="firstImages cartItem">
                 <a href="itemsForSale/espresso.html"><img
                         src="https://cnet2.cbsistatic.com/img/ptlJe0_K-sHGRG9w4p35B05cc7Y=/970x0/2018/09/25/5e77b244-f560-4884-872e-9e81d55e454a/espressotoria-black.jpg"
-                        alt=""></a>
+                        alt="">
+                </img>
+                </a>
                 <p>Espresso Machine</p>
                 <button class="addToCart" data-name="Espresso machine" data-price="1500" data-image="https://cnet2.cbsistatic.com/img/ptlJe0_K-sHGRG9w4p35B05cc7Y=/970x0/2018/09/25/5e77b244-f560-4884-872e-9e81d55e454a/espressotoria-black.jpg">Add to Cart </button>
             </div>
 
 
             <div class="firstImages cartItem">
-                <a href="itemsForSale/candy.html"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL12Q7v7yOgXBB9ggt_NZqeHMlaxdFAig2w9gxIBC84JDLQW5Lkw"
-                        alt=""></a>
+                <a href="itemsForSale/candy.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL12Q7v7yOgXBB9ggt_NZqeHMlaxdFAig2w9gxIBC84JDLQW5Lkw" alt="">
+                </img>
+                </a>
                 <p>Something Sweet</p>
                 <button class="addToCart" data-name="sweet candy" data-price="50" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL12Q7v7yOgXBB9ggt_NZqeHMlaxdFAig2w9gxIBC84JDLQW5Lkw">Add to Cart</button>
             </div>
 
             <div class="firstImages cartItem">
-                <a href="itemsForSale/coffeeCapsules.html"><img
-                        src="https://www.super-espresso.com/wp-content/uploads/2013/10/Nespresso-Capsules.jpg"
-                        alt=""></a>
+                <a href="itemsForSale/coffeeCapsules.html">
+                <img src="https://www.super-espresso.com/wp-content/uploads/2013/10/Nespresso-Capsules.jpg" alt="">
+                </img>
+                </a>
                 <p>Coffee Capsules</p>
                 <button class="addToCart" data-name="Capsules" data-price="700" data-image="https://www.super-espresso.com/wp-content/uploads/2013/10/Nespresso-Capsules.jpg">Add to Cart</button>
             </div>
 
             <div class="firstImages cartItem">
-                <a href="itemsForSale/jack.html"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYwHxsIw61xwdcyjPrhZHpU8gy9hCY7Rv8beEEuBi5Gt9iPboa6A"
-                        alt=""></a>
+                <a href="itemsForSale/jack.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYwHxsIw61xwdcyjPrhZHpU8gy9hCY7Rv8beEEuBi5Gt9iPboa6A" alt="">
+                </img>
+                </a>
                 <p>For the classy</p>
                 <button class="addToCart" data-name="Jack Daniels Coffee" data-price="1000" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYwHxsIw61xwdcyjPrhZHpU8gy9hCY7Rv8beEEuBi5Gt9iPboa6A">Add to Cart</button>
             </div>
@@ -84,41 +83,47 @@
             <h3>New and fresh</h3>
 
             <div class="secondImages cartItem">
-                <a href="itemsForSale/organic.html"><img
-                        src="https://images-na.ssl-images-amazon.com/images/I/811Wj4LfQ1L._SX425_.jpg" alt=""></a>
+                <a href="itemsForSale/organic.html">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/811Wj4LfQ1L._SX425_.jpg" alt="">
+                </img>
+                </a>
                 <p>Keep it organic</p>
                 <button class="addToCart" data-name="organic coffee" data-price="500" data-image="https://images-na.ssl-images-amazon.com/images/I/811Wj4LfQ1L._SX425_.jpg">Add to Cart</button>
             </div>
 
             <div class="secondImages cartItem">
-                <a href="itemsForSale/additives.html"><img
-                        src="https://tse4.mm.bing.net/th?id=OIP.5jRe8f04sYGqELRxS74PpAHaJ4&pid=Api&P=0&w=300&h=300"
-                        alt=""></a>
+                <a href="itemsForSale/additives.html">
+                <img src="http://x776.co/wp-content/uploads/2018/11/starbucks-coffee-packs-starbucks-iced-coffee-buy-online-starbucks-iced-coffee-packets.jpg" alt="">
+                </img>
+                </a>
                 <p>Frappuccino</p>
                 <button class="addToCart" data-name="Frappuccino" data-price="400" data-image="http://x776.co/wp-content/uploads/2018/11/starbucks-coffee-packs-starbucks-iced-coffee-buy-online-starbucks-iced-coffee-packets.jpg">Add to Cart</button>
             </div>
 
             <div class="secondImages cartItem">
-                <a href="itemsForSale/decaf.html"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1qn-VVki6ncjPUUFZTDZ4jR8GKhnhenApOCMHJz6OaSTNYWj"
-                        alt=""></a>
+                <a href="itemsForSale/decaf.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1qn-VVki6ncjPUUFZTDZ4jR8GKhnhenApOCMHJz6OaSTNYWj" alt="">
+                </img>
+                </a>
                 <p>Delicious Decaf</p>
                 <button class="addToCart" data-name="decaf" data-price="300" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1qn-VVki6ncjPUUFZTDZ4jR8GKhnhenApOCMHJz6OaSTNYWj">Add to Cart</button>
 
             </div>
 
             <div class="secondImages cartItem">
-                <a href="itemsForSale/machine.html"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuNjednF-dWi-DJB5kXt2CXSlca2DAEH6xDHTX65-DvhAjoP4VA"
-                        alt=""></a>
+                <a href="itemsForSale/machine.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuNjednF-dWi-DJB5kXt2CXSlca2DAEH6xDHTX65-DvhAjoP4VA" alt="">
+                  </img>
+                  </a>
                 <p>For the machine</p>
                 <button class="addToCart" data-name="machine coffee" data-price="100" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuNjednF-dWi-DJB5kXt2CXSlca2DAEH6xDHTX65-DvhAjoP4VA">Add to Cart</button>
             </div>
 
             <div class="secondImages cartItem">
-                <a href="itemsForSale/flavoured.html"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStoMxtzDPUzv9yCB3gDUbZK6vhtbBdAetBKroWza58bAVD49H5"
-                        alt=""></a>
+                <a href="itemsForSale/flavoured.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStoMxtzDPUzv9yCB3gDUbZK6vhtbBdAetBKroWza58bAVD49H5" alt="">
+                </img>
+                </a>
                 <p>Adventurous</p>
                 <button class="addToCart" data-name="hazelnut coffee" data-price="500" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStoMxtzDPUzv9yCB3gDUbZK6vhtbBdAetBKroWza58bAVD49H5">Add to Cart</button>
             </div>
@@ -134,67 +139,9 @@
         </div>
         <p id='cert'>Coffeeworks Company &copy;||Developed by Harmony33</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="storage.js"></script>
-    <script>
-        // Hide cart until clicked on
-     let cartDisplay = $('#cartData').hide();
+    </body>
+    </div>
+  );
+}
 
-    //    Slide cart open
-    $('#cartNavBtn').click(function(){
-        cartDisplay.slideToggle(1000)
-    });
-// Cart items click function
-$('.addToCart').click(function (event){
-    event.preventDefault();
-    let name = $(this).attr('data-name');
-    let price = Number($(this).attr('data-price'));
-    let image = $(this).attr('data-image')
-    
-    shoppingCart.addItemToCart(name, price, 1, image);
-    displayCart()
-});
-// Send to checkout page
-$('#checkOutBtn').click(function(){
-    shoppingCart.checkFunction();
-})
-
-function displayCart(){
-    let output = "";
-    let cartArray = shoppingCart.listCart();
-
-    for(items in cartArray){
-       output+= '<p>'
-
-        +cartArray[items].name
-        + " <input class='item-count' type='number' data-name='" + cartArray[items].name + "' value='" + cartArray[items].count + "' >"
-        + ' X' + cartArray[items].count + ' = ' + "R" + cartArray[items].total
-        + "<button class='remove-item' data-name= '" + cartArray[items].name + "'>" + 'x' + '</button>'  
-        +'</p>'
-    }
-
-    $('#showCart').html(output);
-    $('#countCart').html(shoppingCart.countCart());
-    $('#cartCount').html(shoppingCart.countCart());
-    $('#totalCart').html(shoppingCart.totalPrice());
-};
-
-// **Event Delegation**
-$('#showCart').on('click', '.remove-item', function(event){
-let name = $(this).attr('data-name');
-shoppingCart.deleteItem(name);
-displayCart();
-});
-
-$('#showCart').on('change', '.item-count', function(change){
-    let name = $(this).attr('data-name');
-    // Have to set to number so it wont interfere with html
-    let newCount = Number($(this).val());
-    shoppingCart.updateCount(name, newCount);
-    displayCart();
-});
-
-    </script>
-</body>
-
-</html>
+export default App;

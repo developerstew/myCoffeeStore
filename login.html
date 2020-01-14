@@ -7,6 +7,7 @@
     <title>Coffeeworks</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto|ZCOOL+KuaiLe" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
    
 </head>
@@ -16,28 +17,23 @@
         <h1><span>C</span>offeeworks</h1>
     </div>
     
-    <nav class="mainNav">
-        <ul>
-            <a href="store.html" id='homeColor'>Home</a>
-            <a href="login.html">Login</a>
-            <a href="visit.html">Visit</a>
-            <a id="cartNavBtn">Cart <span id="cartCount"></span></a>
-        </ul>
-        <div id="cartData">
+    <nav class="navbar sticky-top">
+    <a class="navbar-brand text-white" href="store.html" id='homeColor'>Home</a>
+    <a class="navbar-brand text-white" href="login.html">Login</a>
+    <a class="navbar-brand text-white" href="visit.html">Visit</a>
+    <a class="navbar-brand text-white" id="cartNavBtn">Cart <span id="cartCount"></span></a>            
+    <div id="cartData">
             <div id="showCart" >
                 </div>
                     <div class="cartBottom">You have <span id="countCart">0</span> items in your cart!</div>
                     <div class="cartBottom">Total Cart: R<span id="totalCart">0</span></div>
-                    <a href="checkOutPage/checkOut.html" id="checkOut"><button class="checkOutBtn">CHECKOUT</button></a>
+                    <button id="checkOutBtn">CHECKOUT</button>
         </div>
-      
-    </nav>
+  </nav>
     </div>
    
    
  <form action="">
-     
-         
 
     <div id="form">
 

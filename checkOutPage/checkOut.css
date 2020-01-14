@@ -133,3 +133,15 @@ main #book{
     display: block;
     text-align: center
 }
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #955E3F;
+           }
+   nav a{
+       color: white;
+   }
+              #cartCount{
+               color: red;
+           }
